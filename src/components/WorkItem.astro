@@ -17,6 +17,7 @@ const dotColor: Record<WorkItem['status'], string> = {
 
 <div class="item">
   <div class="row">
+    {item.icon && <img class="icon" src={item.icon} alt="" width="22" height="22" />}
     <a
       class="name"
       href={item.url}
@@ -36,6 +37,14 @@ const dotColor: Record<WorkItem['status'], string> = {
     display: flex;
     align-items: baseline;
     gap: 11px;
+  }
+  .icon {
+    width: 22px;
+    height: 22px;
+    flex: 0 0 auto;
+    align-self: center;
+    transform: translateY(2px);
+    mix-blend-mode: multiply;
   }
   .name {
     font-family: var(--serif);

@@ -8,6 +8,7 @@ export interface WorkItem {
   meta: string;
   status: Status;
   description: string;
+  icon?: string;
 }
 
 export const apps: WorkItem[] = [
@@ -15,6 +16,7 @@ export const apps: WorkItem[] = [
     name: 'Greyout',
     url: 'https://greyout.cc/',
     external: true,
+    icon: '/logos/greyout.png',
     tag: 'macOS',
     meta: '2026',
     status: 'live',

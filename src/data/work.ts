@@ -38,7 +38,7 @@ export const openSource: WorkItem[] = [
       'Bot-free Google Meet notes, filed to your own apps the moment you leave. No bot, no audio, no lock-in.',
   },
   {
-    name: 'YouTube Transcribe',
+    name: 'YouTube Scribe',
     url: 'https://github.com/caasols/raycast-youtube-scribe',
     external: true,
     icon: '/logos/raycast.png',
@@ -50,7 +50,7 @@ export const openSource: WorkItem[] = [
   },
   {
     name: 'Público',
-    url: 'https://github.com/caasols/raycast-publico',
+    url: 'https://www.raycast.com/caasols/publico',
     external: true,
     icon: '/logos/raycast.png',
     tag: 'raycast',

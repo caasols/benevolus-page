@@ -30,6 +30,7 @@ export const openSource: WorkItem[] = [
     name: 'Gememo',
     url: 'https://github.com/caasols/gememo',
     external: true,
+    icon: '/logos/gememo.png',
     tag: 'chrome',
     meta: '2026',
     status: 'live',

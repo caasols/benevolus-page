@@ -1,0 +1,59 @@
+<img
+  id="portrait"
+  src="/portraits/portrait-1.png"
+  alt="Hand-drawn portrait of Sol"
+  width="150"
+  height="150"
+/>
+
+<style>
+  img {
+    width: 150px;
+    height: 150px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    object-position: center 42%;
+    display: block;
+  }
+  @media (max-width: 680px) {
+    img {
+      width: 116px;
+      height: 116px;
+    }
+  }
+</style>
+
+<script>
+  const el = document.getElementById('portrait') as HTMLImageElement | null;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (el && !reduced) {
+    const boilFrames = [
+      '/portraits/portrait-1.png',
+      '/portraits/portrait-2.png',
+      '/portraits/portrait-4.png',
+    ];
+    const blinkFrame = '/portraits/portrait-3.png';
+    [...boilFrames, blinkFrame].forEach((src) => {
+      const i = new Image();
+      i.src = src;
+    });
+
+    let bi = 0;
+    setInterval(() => {
+      bi = (bi + 1) % boilFrames.length;
+      el.src = boilFrames[bi];
+    }, 380);
+
+    const scheduleBlink = () => {
+      setTimeout(() => {
+        el.src = blinkFrame;
+        setTimeout(() => {
+          el.src = boilFrames[bi];
+          scheduleBlink();
+        }, 130);
+      }, 2600 + Math.random() * 2400);
+    };
+    scheduleBlink();
+  }
+</script>

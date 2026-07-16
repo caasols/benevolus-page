@@ -3,7 +3,6 @@ export type Status = 'live' | 'paused' | 'exited' | 'closed' | 'archived';
 export interface WorkItem {
   name: string;
   url: string;
-  external: boolean;
   meta: string;
   status: Status;
   description: string;
@@ -14,7 +13,6 @@ export const apps: WorkItem[] = [
   {
     name: 'Greyout',
     url: 'https://greyout.cc/',
-    external: true,
     icon: '/logos/greyout.png',
     meta: '2026',
     status: 'live',
@@ -27,7 +25,6 @@ export const openSource: WorkItem[] = [
   {
     name: 'Gememo',
     url: 'https://github.com/caasols/gememo',
-    external: true,
     icon: '/logos/gememo.png',
     meta: '2026',
     status: 'live',
@@ -37,7 +34,6 @@ export const openSource: WorkItem[] = [
   {
     name: 'YouTube Scribe',
     url: 'https://github.com/caasols/raycast-youtube-scribe',
-    external: true,
     icon: '/logos/raycast.png',
     meta: 'MIT',
     status: 'live',
@@ -47,7 +43,6 @@ export const openSource: WorkItem[] = [
   {
     name: 'Público',
     url: 'https://www.raycast.com/caasols/publico',
-    external: true,
     icon: '/logos/raycast.png',
     meta: 'MIT',
     status: 'live',
@@ -60,7 +55,6 @@ export const ventures: WorkItem[] = [
   {
     name: 'GotJazz?',
     url: 'https://waxconn.com/',
-    external: true,
     icon: '/logos/gotjazz.png',
     meta: '2020–21',
     status: 'live',
@@ -70,7 +64,6 @@ export const ventures: WorkItem[] = [
   {
     name: 'A Traineira',
     url: '#',
-    external: false,
     icon: '/logos/traineira.png',
     meta: '2016–21',
     status: 'closed',
@@ -80,7 +73,6 @@ export const ventures: WorkItem[] = [
   {
     name: 'We Love Film',
     url: '#',
-    external: false,
     icon: '/logos/wlf.png',
     meta: '2010–16',
     status: 'archived',

@@ -75,6 +75,7 @@ export const ventures: WorkItem[] = [
     name: 'A Traineira',
     url: '#',
     external: false,
+    icon: '/logos/traineira.png',
     tag: 'vinyl',
     meta: '2016–21',
     status: 'closed',

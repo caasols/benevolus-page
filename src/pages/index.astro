@@ -11,15 +11,16 @@ import { apps, openSource, ventures } from '../data/work';
 >
   <header class="hero">
     <Portrait />
-    <h1>Benevol.us is a tiny studio, building for good.</h1>
+    <div class="hero-text">
+      <h1>Benevol.us is a tiny studio, building for good.</h1>
+      <nav class="social">
+        <a href="mailto:hello@benevol.us">Email</a>
+        <a href="https://github.com/caasols" target="_blank" rel="noopener">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Bluesky</a>
+      </nav>
+    </div>
   </header>
-
-  <nav class="social">
-    <a href="mailto:hello@benevol.us">Email</a>
-    <a href="https://github.com/caasols" target="_blank" rel="noopener">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Bluesky</a>
-  </nav>
 
   <p class="lead">
     No dark patterns. No subscription you can’t leave. No lock-in on your own data. Just useful
@@ -41,13 +42,17 @@ import { apps, openSource, ventures } from '../data/work';
     display: flex;
     align-items: center;
     gap: 28px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
+  }
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
   }
   .social {
     display: flex;
-    gap: 22px;
+    gap: 24px;
     flex-wrap: wrap;
-    margin-bottom: 34px;
     font-family: var(--mono);
     font-size: 13px;
   }

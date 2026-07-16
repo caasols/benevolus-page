@@ -49,6 +49,8 @@ const { title, description } = Astro.props;
   }
   html {
     -webkit-text-size-adjust: 100%;
+    /* reserve gutter so the layout doesn't shift when a scrollbar appears */
+    scrollbar-gutter: stable both-edges;
   }
   body {
     margin: 0;

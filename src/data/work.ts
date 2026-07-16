@@ -64,13 +64,14 @@ export const openSource: WorkItem[] = [
 export const ventures: WorkItem[] = [
   {
     name: 'GotJazz?',
-    url: 'https://waxconn.com',
+    url: 'https://waxconn.com/',
     external: true,
     icon: '/logos/gotjazz.png',
     tag: 'saas',
     meta: '2020–21',
     status: 'live',
-    description: 'Discogs × Shopify for small record shops. Exited to Waxconn.com.',
+    description:
+      'Discogs × Shopify for small record shops. Started as a Python script; Waxconn bought that first version and keeps it spinning.',
   },
   {
     name: 'A Traineira',

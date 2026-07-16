@@ -65,6 +65,7 @@ export const ventures: WorkItem[] = [
     name: 'GotJazz?',
     url: 'https://waxconn.com',
     external: true,
+    icon: '/logos/gotjazz.png',
     tag: 'saas',
     meta: '2020–21',
     status: 'live',

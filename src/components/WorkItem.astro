@@ -17,7 +17,18 @@ const dotColor: Record<WorkItem['status'], string> = {
 
 <div class="item">
   <div class="row">
-    {item.icon && <img class="icon" src={item.icon} alt="" width="22" height="22" />}
+    {item.icon && (
+      <a
+        class="icon-link"
+        href={item.url}
+        target={item.external ? '_blank' : undefined}
+        rel={item.external ? 'noopener' : undefined}
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <img class="icon" src={item.icon} alt="" width="22" height="22" />
+      </a>
+    )}
     <a
       class="name"
       href={item.url}
@@ -39,12 +50,15 @@ const dotColor: Record<WorkItem['status'], string> = {
     align-items: baseline;
     gap: 11px;
   }
+  .icon-link {
+    flex: 0 0 auto;
+    align-self: center;
+    line-height: 0;
+  }
   .icon {
     width: 22px;
     height: 22px;
     object-fit: contain;
-    flex: 0 0 auto;
-    align-self: center;
     /* optical centring: align to the title's cap-height centre, not its line box */
     transform: translateY(-2.5px);
     mix-blend-mode: multiply;

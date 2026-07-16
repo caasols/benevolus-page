@@ -54,7 +54,7 @@ export const openSource: WorkItem[] = [
     meta: 'MIT',
     status: 'live',
     description:
-      'Read the latest news of the Portuguese daily Público, straight from Raycast.',
+      'A Raycast extension that serves the latest news of the Portuguese daily Público.',
   },
 ];
 

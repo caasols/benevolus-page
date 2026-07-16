@@ -1,43 +1,37 @@
-# Astro Starter Kit: Minimal
+# benevol.us
+
+The website of **Benevol.us** — a tiny software studio run by Sol, building for good.
+From the Latin *bene + volus*, "wishing well": software that serves people, not subscriptions.
+
+**Live at [benevol.us](https://benevol.us)** — deployed to GitHub Pages on every push to `main`.
+
+## Stack
+
+- [Astro](https://astro.build) + TypeScript, plain scoped CSS (no framework)
+- Self-hosted fonts via [@fontsource](https://fontsource.org) (Space Mono + Newsreader)
+- The only client-side JS is the hand-drawn portrait's boil/blink animation (~25 lines, vanilla)
+
+## Development
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev       # local dev server at localhost:4321
+npm run build     # production build to ./dist/
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Where things live
 
-## 🚀 Project Structure
+| Path | Purpose |
+| :--- | :--- |
+| `src/pages/index.astro` | The homepage |
+| `src/data/work.ts` | Portfolio content (apps, open source, ventures) — edit here to update the lists |
+| `src/components/` | `TopBar`, `Portrait`, `WorkList`/`WorkItem`, `SiteFooter` |
+| `src/layouts/BaseLayout.astro` | Fonts, design tokens, global styles |
+| `public/portraits/` | The four ink portrait frames (boil + blink) |
+| `docs/design/` | Original design handoff + hi-fi prototype |
+| `docs/superpowers/` | Design spec and implementation plan |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Deployment
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+`.github/workflows/deploy.yml` builds with Node 22 and publishes to GitHub Pages.
+Custom domain `benevol.us` is set via `public/CNAME` + the repo's Pages settings.

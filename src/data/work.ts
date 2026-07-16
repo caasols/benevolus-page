@@ -85,6 +85,7 @@ export const ventures: WorkItem[] = [
     name: 'We Love Film',
     url: '#',
     external: false,
+    icon: '/logos/wlf.png',
     tag: 'shop',
     meta: '2010–16',
     status: 'archived',

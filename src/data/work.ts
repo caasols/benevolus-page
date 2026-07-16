@@ -62,7 +62,7 @@ export const openSource: WorkItem[] = [
 
 export const ventures: WorkItem[] = [
   {
-    name: 'GotJazz',
+    name: 'GotJazz?',
     url: 'https://waxconn.com',
     external: true,
     tag: 'saas',

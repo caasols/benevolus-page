@@ -4,7 +4,6 @@ export interface WorkItem {
   name: string;
   url: string;
   external: boolean;
-  tag?: string;
   meta: string;
   status: Status;
   description: string;
@@ -17,11 +16,10 @@ export const apps: WorkItem[] = [
     url: 'https://greyout.cc/',
     external: true,
     icon: '/logos/greyout.png',
-    tag: 'macOS',
     meta: '2026',
     status: 'live',
     description:
-      'A menu-bar app that greys out your screen so colour and notifications stop pulling at you. Calm tech, one keypress.',
+      'A macOS menu-bar app that greys out your screen so colour and notifications stop pulling at you. Calm tech, one keypress.',
   },
 ];
 
@@ -64,7 +62,6 @@ export const ventures: WorkItem[] = [
     url: 'https://waxconn.com/',
     external: true,
     icon: '/logos/gotjazz.png',
-    tag: 'saas',
     meta: '2020–21',
     status: 'live',
     description:
@@ -75,7 +72,6 @@ export const ventures: WorkItem[] = [
     url: '#',
     external: false,
     icon: '/logos/traineira.png',
-    tag: 'vinyl',
     meta: '2016–21',
     status: 'closed',
     description:
@@ -86,7 +82,6 @@ export const ventures: WorkItem[] = [
     url: '#',
     external: false,
     icon: '/logos/wlf.png',
-    tag: 'shop',
     meta: '2010–16',
     status: 'archived',
     description: 'Analogue photography e-commerce, back when film was “dead.”',

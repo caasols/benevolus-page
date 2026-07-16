@@ -35,7 +35,6 @@ const dotColor: Record<WorkItem['status'], string> = {
       target={item.external ? '_blank' : undefined}
       rel={item.external ? 'noopener' : undefined}
     >{item.name}</a>
-    {item.tag && <span class="tag">{item.tag}</span>}
     <span class="end">
       <span class="meta">{item.meta}</span>
       <span class="dot" style={`background: ${dotColor[item.status]}`} title={item.status}></span>
@@ -68,16 +67,6 @@ const dotColor: Record<WorkItem['status'], string> = {
     font-size: 21px;
     font-weight: 500;
     text-decoration: none;
-  }
-  .tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border: 1px solid var(--tag-border);
-    padding: 1px 6px;
-    border-radius: 4px;
   }
   .end {
     margin-left: auto;

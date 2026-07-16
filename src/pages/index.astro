@@ -1,10 +1,91 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import TopBar from '../components/TopBar.astro';
+import Portrait from '../components/Portrait.astro';
+import WorkList from '../components/WorkList.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { apps, openSource, ventures } from '../data/work';
 ---
 
 <BaseLayout
   title="Benevol.us — a tiny studio, building for good"
   description="No dark patterns. No subscription you can't leave. No lock-in on your own data. Just useful tools, made small and made well."
 >
-  <h1>Benevol.us</h1>
+  <TopBar />
+
+  <header class="hero">
+    <Portrait />
+    <h1>Benevol.us is a tiny studio, building for good.</h1>
+  </header>
+
+  <p class="lead">
+    No dark patterns. No subscription you can’t leave. No lock-in on your own data. Just useful
+    tools, made small and made well.
+  </p>
+
+  <p class="byline">A studio of one. Made by me, <strong>Sol</strong>.</p>
+
+  <hr />
+  <WorkList id="apps" heading="Apps" caption="est. · status" items={apps} />
+  <hr />
+  <WorkList id="open-source" heading="Open source" items={openSource} />
+  <hr />
+  <WorkList id="ventures" heading="Ventures" caption="est. · status" items={ventures} />
+
+  <SiteFooter />
 </BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .lead {
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.62;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0;
+  }
+  .byline {
+    margin: 34px 0 0;
+    font-family: var(--mono);
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .byline strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background: var(--hairline);
+    margin: 50px 0 24px;
+  }
+  hr:first-of-type {
+    margin: 54px 0 28px;
+  }
+  @media (max-width: 680px) {
+    .hero {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+  }
+</style>

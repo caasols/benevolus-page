@@ -25,7 +25,7 @@ npm run build     # production build to ./dist/
 | :--- | :--- |
 | `src/pages/index.astro` | The homepage |
 | `src/data/work.ts` | Portfolio content (apps, open source, ventures) — edit here to update the lists |
-| `src/components/` | `TopBar`, `Portrait`, `WorkList`/`WorkItem`, `SiteFooter` |
+| `src/components/` | `TopBar`, `Portrait`, `WorkList`/`WorkItem` |
 | `src/layouts/BaseLayout.astro` | Fonts, design tokens, global styles |
 | `public/portraits/` | The four ink portrait frames (boil + blink) |
 | `docs/design/` | Original design handoff + hi-fi prototype |

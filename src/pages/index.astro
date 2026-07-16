@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import TopBar from '../components/TopBar.astro';
 import Portrait from '../components/Portrait.astro';
 import WorkList from '../components/WorkList.astro';
-import SiteFooter from '../components/SiteFooter.astro';
 import { apps, openSource, ventures } from '../data/work';
 ---
 
@@ -31,8 +30,6 @@ import { apps, openSource, ventures } from '../data/work';
   <WorkList id="open-source" heading="Open source" items={openSource} />
   <hr />
   <WorkList id="adventures" heading="Adventures" items={ventures} />
-
-  <SiteFooter />
 </BaseLayout>
 
 <style>

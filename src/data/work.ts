@@ -4,7 +4,7 @@ export interface WorkItem {
   name: string;
   url: string;
   external: boolean;
-  tag: string;
+  tag?: string;
   meta: string;
   status: Status;
   description: string;
@@ -31,18 +31,16 @@ export const openSource: WorkItem[] = [
     url: 'https://github.com/caasols/gememo',
     external: true,
     icon: '/logos/gememo.png',
-    tag: 'chrome',
     meta: '2026',
     status: 'live',
     description:
-      'Bot-free Google Meet notes, filed to your own apps the moment you leave. No bot, no audio, no lock-in.',
+      'A Chrome extension for bot-free Google Meet notes, filed to your own apps the moment you leave. No bot, no audio, no lock-in.',
   },
   {
     name: 'YouTube Scribe',
     url: 'https://github.com/caasols/raycast-youtube-scribe',
     external: true,
     icon: '/logos/raycast.png',
-    tag: 'raycast',
     meta: 'MIT',
     status: 'live',
     description:
@@ -53,7 +51,6 @@ export const openSource: WorkItem[] = [
     url: 'https://www.raycast.com/caasols/publico',
     external: true,
     icon: '/logos/raycast.png',
-    tag: 'raycast',
     meta: 'MIT',
     status: 'live',
     description:

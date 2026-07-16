@@ -24,7 +24,7 @@ const dotColor: Record<WorkItem['status'], string> = {
       target={item.external ? '_blank' : undefined}
       rel={item.external ? 'noopener' : undefined}
     >{item.name}</a>
-    <span class="tag">{item.tag}</span>
+    {item.tag && <span class="tag">{item.tag}</span>}
     <span class="end">
       <span class="meta">{item.meta}</span>
       <span class="dot" style={`background: ${dotColor[item.status]}`} title={item.status}></span>

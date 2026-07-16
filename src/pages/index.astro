@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import TopBar from '../components/TopBar.astro';
 import Portrait from '../components/Portrait.astro';
 import WorkList from '../components/WorkList.astro';
 import { apps, openSource, ventures } from '../data/work';
@@ -10,12 +9,17 @@ import { apps, openSource, ventures } from '../data/work';
   title="Benevol.us — a tiny studio, building for good"
   description="No dark patterns. No subscription you can't leave. No lock-in on your own data. Just useful tools, made small and made well."
 >
-  <TopBar />
-
   <header class="hero">
     <Portrait />
     <h1>Benevol.us is a tiny studio, building for good.</h1>
   </header>
+
+  <nav class="social">
+    <a href="mailto:hello@benevol.us">Email</a>
+    <a href="https://github.com/caasols" target="_blank" rel="noopener">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Bluesky</a>
+  </nav>
 
   <p class="lead">
     No dark patterns. No subscription you can’t leave. No lock-in on your own data. Just useful
@@ -37,7 +41,22 @@ import { apps, openSource, ventures } from '../data/work';
     display: flex;
     align-items: center;
     gap: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
+  }
+  .social {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .social a {
+    color: var(--faint);
+    text-decoration: none;
+  }
+  .social a:hover {
+    color: var(--accent);
   }
   h1 {
     font-family: var(--serif);

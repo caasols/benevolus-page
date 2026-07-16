@@ -46,7 +46,7 @@ export const openSource: WorkItem[] = [
     meta: 'MIT',
     status: 'live',
     description:
-      'Fetch, browse, and export YouTube transcripts with AI summaries — right in your command bar.',
+      'Fetch, browse, and export YouTube transcripts with AI summaries, straight from Raycast.',
   },
   {
     name: 'Público',
@@ -57,7 +57,7 @@ export const openSource: WorkItem[] = [
     meta: 'MIT',
     status: 'live',
     description:
-      'Read the latest from the Portuguese daily Público without leaving your command bar.',
+      'Read the latest news of the Portuguese daily Público, straight from Raycast.',
   },
 ];
 

@@ -1,0 +1,78 @@
+---
+import '@fontsource/space-mono/400.css';
+import '@fontsource/space-mono/700.css';
+import '@fontsource/newsreader/400.css';
+import '@fontsource/newsreader/500.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.site} />
+  </head>
+  <body>
+    <div class="bv-wrap">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #f4ecd8;
+    --ink: #262445;
+    --ink-soft: #33314e;
+    --muted: #57503f;
+    --faint: #8a836f;
+    --accent: #b04a2c;
+    --dot-live: #4a8a4a;
+    --dot-paused: #c99a2e;
+    --dot-ended: #a7a08c;
+    --hairline: rgba(38, 36, 69, 0.16);
+    --leader: rgba(38, 36, 69, 0.26);
+    --tag-border: rgba(176, 74, 44, 0.4);
+    --mono: 'Space Mono', monospace;
+    --serif: 'Newsreader', serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  a {
+    color: var(--ink);
+  }
+  a:hover {
+    color: var(--accent);
+  }
+  ::selection {
+    background: rgba(38, 36, 69, 0.14);
+  }
+  .bv-wrap {
+    max-width: 736px;
+    margin: 0 auto;
+    padding: 68px 40px 96px;
+  }
+  @media (max-width: 680px) {
+    .bv-wrap {
+      padding: 40px 24px 64px;
+    }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import type { WorkItem as WorkItemData } from '../data/work';
+import WorkItem from './WorkItem.astro';
+
+interface Props {
+  id: string;
+  heading: string;
+  caption?: string;
+  items: WorkItemData[];
+}
+const { id, heading, caption, items } = Astro.props;
+---
+
+<section {id}>
+  <div class="head">
+    <h2>{heading}</h2>
+    {caption && <span class="caption">{caption}</span>}
+  </div>
+  <div class="items">
+    {items.map((item) => <WorkItem {item} />)}
+  </div>
+</section>
+
+<style>
+  .head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-family: var(--mono);
+  }
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .caption {
+    font-size: 12px;
+    color: var(--faint);
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+</style>

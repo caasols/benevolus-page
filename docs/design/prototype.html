@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #f4ecd8; color: #262445; }
+  a { color: #262445; }
+  a:hover { color: #b04a2c; }
+  ::selection { background: rgba(38,36,69,0.14); }
+  @media (max-width: 680px) {
+    .bv-wrap { padding: 40px 24px 64px !important; }
+    .bv-hero { flex-direction: column !important; align-items: flex-start !important; gap: 20px !important; }
+    .bv-h1 { font-size: 30px !important; }
+    .bv-portrait { width: 116px !important; height: 116px !important; }
+    .bv-topbar { margin-bottom: 48px !important; }
+    .bv-row { flex-wrap: wrap !important; }
+    .bv-lead { line-break: 1.55 !important; }
+  }
+</style>
+</helmet>
+
+<div class="bv-wrap" style="max-width: 736px; margin: 0 auto; padding: 68px 40px 96px; color: #262445;">
+
+  <div class="bv-topbar" style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 80px; font-family: 'Space Mono', monospace;">
+    <nav style="display: flex; gap: 30px; font-size: 14.5px;">
+      <a href="#" style="text-decoration: none; font-weight: 700;">Studio</a>
+      <a href="#apps" style="text-decoration: none;">Apps</a>
+      <a href="#" style="text-decoration: none;">Writing</a>
+      <a href="#" style="text-decoration: none;">Ask</a>
+    </nav>
+    <nav style="display: flex; gap: 18px; font-size: 12.5px; color: #8a836f;">
+      <a href="mailto:hello@benevol.us" style="text-decoration: none; color: #8a836f;">Email</a>
+      <a href="https://github.com/caasols" style="text-decoration: none; color: #8a836f;">GitHub</a>
+      <a href="#" style="text-decoration: none; color: #8a836f;">LinkedIn</a>
+      <a href="#" style="text-decoration: none; color: #8a836f;">Bluesky</a>
+    </nav>
+  </div>
+
+  <header class="bv-hero" style="display: flex; align-items: center; gap: 28px; margin-bottom: 30px;">
+    <img ref="{{ portraitRef }}" class="bv-portrait" src="assets/portrait-1.png" alt="Hand-drawn portrait of Sol" style="width: 150px; height: 150px; flex: 0 0 auto; object-fit: cover; object-position: center 42%; display: block;">
+    <h1 class="bv-h1" style="font-family: 'Newsreader', serif; font-weight: 400; font-size: 40px; line-height: 1.22; letter-spacing: -0.01em; margin: 0;">Benevol.us is a tiny studio, building for good.</h1>
+  </header>
+
+  <div style="font-family: 'Newsreader', serif; max-width: 60ch;">
+    <p class="bv-lead" style="font-size: 20px; line-height: 1.62; margin: 0; color: #33314e;">No dark patterns. No subscription you can&rsquo;t leave. No lock-in on your own data. Just useful tools, made small and made well.</p>
+  </div>
+
+  <p style="margin-top: 34px; font-family: 'Space Mono', monospace; font-size: 13.5px; line-height: 1.7; color: #57503f;">A studio of one. Made by me, <span style="color:#262445; font-weight:700;">Sol</span>.</p>
+
+  <div style="height: 1px; background: rgba(38,36,69,0.16); margin: 54px 0 28px;"></div>
+
+  <section id="apps">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px; font-family: 'Space Mono', monospace;">
+      <h2 style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0;">Apps</h2>
+      <span style="font-size: 12px; color: #8a836f;">est. · status</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="https://greyout.cc/" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">Greyout</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">macOS</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">2026</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #4a8a4a;" title="live"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">A menu-bar app that greys out your screen so colour and notifications stop pulling at you. Calm tech, one keypress.</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: 1px; background: rgba(38,36,69,0.16); margin: 50px 0 24px;"></div>
+
+  <section id="open-source">
+    <h2 style="font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 18px;">Open source</h2>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="https://github.com/caasols/gememo" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">Gememo</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">chrome</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">2026</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #4a8a4a;" title="live"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">Bot-free Google Meet notes, filed to your own apps the moment you leave. No bot, no audio, no lock-in.</div>
+      </div>
+
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="https://github.com/caasols/raycast-youtube-scribe" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">Raycast · YouTube Transcribe</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">raycast</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">MIT</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #4a8a4a;" title="live"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">Fetch, browse, and export YouTube transcripts with AI summaries &mdash; right in your command bar.</div>
+      </div>
+
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="https://github.com/caasols/raycast-publico" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">Raycast · Público</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">raycast</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">MIT</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #4a8a4a;" title="live"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">Read the latest from the Portuguese daily Público without leaving your command bar.</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="height: 1px; background: rgba(38,36,69,0.16); margin: 50px 0 24px;"></div>
+
+  <section id="ventures">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px; font-family: 'Space Mono', monospace;">
+      <h2 style="font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0;">Ventures</h2>
+      <span style="font-size: 12px; color: #8a836f;">est. · status</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="https://waxconn.com" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">GotJazz</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">saas</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">2019 · exited</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #a7a08c;" title="exited"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">Discogs &times; Shopify for small record shops. Exited to Waxconn.com.</div>
+      </div>
+
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="#" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">A Traineira</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">vinyl</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">2016–21</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #a7a08c;" title="closed"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">A vinyl records mail-order service and music label, for people who still drop the needle.</div>
+      </div>
+
+      <div>
+        <div class="bv-row" style="display: flex; align-items: baseline; gap: 11px;">
+          <a href="#" style="font-family: 'Newsreader', serif; font-size: 21px; font-weight: 500; text-decoration: none;">We Love Film</a>
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #b04a2c; border: 1px solid rgba(176,74,44,0.4); padding: 1px 6px; border-radius: 4px;">shop</span>
+          <span style="flex: 1; border-bottom: 1px dotted rgba(38,36,69,0.26); transform: translateY(-4px);"></span>
+          <span style="font-family: 'Space Mono', monospace; color: #8a836f; font-size: 13px; white-space: nowrap;">2010–16</span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #a7a08c;" title="archived"></span>
+        </div>
+        <div style="font-family: 'Newsreader', serif; color: #57503f; margin-top: 2px; font-size: 16px; line-height: 1.5;">Analogue photography e-commerce, back when film was &ldquo;dead.&rdquo;</div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="margin-top: 56px; padding-top: 28px; border-top: 1px solid rgba(38,36,69,0.16); display: flex; align-items: baseline; gap: 22px; font-family: 'Space Mono', monospace; font-size: 13.5px; flex-wrap: wrap;">
+    <span style="font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">Find me</span>
+    <a href="mailto:hello@benevol.us" style="text-decoration: underline; text-underline-offset: 3px;">Email</a>
+    <a href="https://github.com/caasols" style="text-decoration: underline; text-underline-offset: 3px;">GitHub</a>
+    <a href="#" style="text-decoration: underline; text-underline-offset: 3px;">LinkedIn</a>
+    <a href="#" style="text-decoration: underline; text-underline-offset: 3px;">Bluesky</a>
+    <a href="#" style="text-decoration: underline; text-underline-offset: 3px;">RSS</a>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  portraitRef = React.createRef();
+
+  boilFrames = ['assets/portrait-1.png', 'assets/portrait-2.png', 'assets/portrait-4.png'];
+  blinkFrame = 'assets/portrait-3.png';
+
+  renderVals() {
+    return { portraitRef: this.portraitRef };
+  }
+
+  componentDidMount() {
+    [...this.boilFrames, this.blinkFrame].forEach(src => { const i = new Image(); i.src = src; });
+
+    let bi = 0;
+    const setSrc = (src) => { const el = this.portraitRef.current; if (el) el.src = src; };
+
+    this._boil = setInterval(() => {
+      bi = (bi + 1) % this.boilFrames.length;
+      setSrc(this.boilFrames[bi]);
+    }, 380);
+
+    const scheduleBlink = () => {
+      this._blink = setTimeout(() => {
+        setSrc(this.blinkFrame);
+        setTimeout(() => { setSrc(this.boilFrames[bi]); scheduleBlink(); }, 130);
+      }, 2600 + Math.random() * 2400);
+    };
+    scheduleBlink();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._boil);
+    clearTimeout(this._blink);
+  }
+}
+</script>
+</body>
+</html>

@@ -66,8 +66,8 @@ export const ventures: WorkItem[] = [
     url: 'https://waxconn.com',
     external: true,
     tag: 'saas',
-    meta: '2019 · exited',
-    status: 'exited',
+    meta: '2020–21',
+    status: 'live',
     description: 'Discogs × Shopify for small record shops. Exited to Waxconn.com.',
   },
   {

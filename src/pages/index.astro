@@ -28,11 +28,11 @@ import { apps, openSource, ventures } from '../data/work';
 
   <p class="byline">A studio of one. Made by me, <strong>Sol</strong>.</p>
 
-  <hr />
+  <img class="divider" src="/dividers/divider.png" alt="" />
   <WorkList id="apps" heading="Apps" items={apps} />
-  <hr />
+  <img class="divider" src="/dividers/divider.png" alt="" />
   <WorkList id="open-source" heading="Open source" items={openSource} />
-  <hr />
+  <img class="divider" src="/dividers/divider.png" alt="" />
   <WorkList id="adventures" heading="Adventures" items={ventures} />
 </BaseLayout>
 
@@ -85,13 +85,14 @@ import { apps, openSource, ventures } from '../data/work';
     color: var(--ink);
     font-weight: 700;
   }
-  hr {
-    border: 0;
-    height: 1px;
-    background: var(--hairline);
+  .divider {
+    display: block;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
     margin: 50px 0 24px;
   }
-  hr:first-of-type {
+  .divider:first-of-type {
     margin: 54px 0 28px;
   }
   @media (max-width: 680px) {

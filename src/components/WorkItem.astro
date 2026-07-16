@@ -43,6 +43,8 @@ const dotColor: Record<WorkItem['status'], string> = {
     height: 22px;
     flex: 0 0 auto;
     align-self: center;
+    /* optical centring: align to the title's cap-height centre, not its line box */
+    transform: translateY(-2.5px);
     mix-blend-mode: multiply;
   }
   .name {
